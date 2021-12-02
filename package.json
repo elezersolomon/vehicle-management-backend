@@ -1,0 +1,17 @@
+{
+  "name": "vehicle-management-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hurricanesupport/team-playground/vehicle-management-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
