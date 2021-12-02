@@ -14,7 +14,7 @@ const makeController = ({ db, helper }) => {
     ...roleController,
     ...teamController,
     ...vehicleController,
-    ...deviceController,
+   
   };
 };
 

@@ -25,7 +25,7 @@ const makeHttpRequest = (controller, helper) => {
 const makeApi = ({ router, controller, helper }) => {
   router.get("/test", (req, res) => res.send("working.."));
   router.post(
-    "/user/system/initial_admin_user",
+    "/user/system/adminuser",
     makeHttpRequest(controller.createInitialAdminUser, helper)
   );
 

@@ -1,5 +1,4 @@
-const { custom } = require("@hapi/joi");
-const { VehicleOwner } = require("../../../JoySchema/Vehicle_Schema");
+
 
 const makeVehicleEntity = ({ helper }) => {
   const { customFunctions } = helper;
