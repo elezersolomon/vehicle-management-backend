@@ -44,6 +44,7 @@ const makeUserStore = ({ db, helper }) => {
   const checkUserInfoInStore = async ({ user }) => {
     var { userName, password } = user;
     var userData = await db.find({ type: "user", userName });
+    console.log("userdatalength : ", userData, userName, password);
 
     if (userData.length == 0) {
       throw new Error("Invalid user name or password");

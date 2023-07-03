@@ -3,6 +3,8 @@ const makeHttpRequest = (controller, helper) => {
   const { checkAuthorization } = customFunctions;
 
   return async (req, res, next) => {
+    console.log("req : ", req.body.length);
+
     try {
       var http = {
         data: req.body,
@@ -74,7 +76,10 @@ const makeApi = ({ router, controller, helper }) => {
   router.get("/device", makeHttpRequest(controller.findDevices, helper));
   router.post("/simcard", makeHttpRequest(controller.createSimcard, helper));
   router.get("/simcard", makeHttpRequest(controller.findSimcards, helper));
-  router.post("/accessory", makeHttpRequest(controller.createAccessory, helper));
+  router.post(
+    "/accessory",
+    makeHttpRequest(controller.createAccessory, helper)
+  );
   router.get("/accessory", makeHttpRequest(controller.findAccessories, helper));
   router.post(
     "/device/:id/pair",

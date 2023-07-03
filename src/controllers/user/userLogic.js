@@ -41,6 +41,8 @@ const makeUserBusinessLogic = ({ store, entity, helper }) => {
     return userData;
   };
   const signIn = async ({ data, query, parameter }) => {
+    console.log("datasignin :  ", data);
+
     var validatedUser = validateSignIn({ data });
     var userData = await checkUserInfoInStore({ user: validatedUser });
     var token = generateToken(userData, "12H");
@@ -52,8 +54,11 @@ const makeUserBusinessLogic = ({ store, entity, helper }) => {
       throw new Error("Not Authorized");
     }
 
-    var userEntity = await validateUserEdition({ user: data, id: parameter.id });
-    var userData = editUserInStore({ data: userEntity});
+    var userEntity = await validateUserEdition({
+      user: data,
+      id: parameter.id,
+    });
+    var userData = editUserInStore({ data: userEntity });
     return userData;
   };
 
